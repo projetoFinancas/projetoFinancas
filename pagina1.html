@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Despesas</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+
+    
+    <div class="navbar">
+        <h1>Bem-vindo, João Silva!</h1>
+
+
+        
+        <div class="sidebar">
+            <h1>Lista de Tarefas</h1>
+            
+            <!-- Container para o campo de tarefa e o botão -->
+            <div class="input-container">
+                <input class="input-task" placeholder="O que tenho que fazer..."> <!-- entrada de texto para adicionar tarefas -->
+                <button class="button-add-task">Adicionar</button> <!-- Botão para adicionar a tarefa -->
+            </div>
+    
+            <div class="urgent-container"> <!-- Div para agrupar o checkbox e o rótulo de urgência -->
+                <label>
+                    <input type="checkbox" class="urgent-checkbox"> <!-- Checkbox para marcar a tarefa como urgente -->
+                    Marcar tarefa como urgente
+                </label>
+            </div>
+    
+            <ul class="list-tasks"></ul> <!-- Lista não ordenada onde as tarefas serão exibidas -->
+        </div>
+
+    <h1>Formulários de despesas</h1>
+    <!-- Formulário de Renda -->
+    <div class="form-container">
+        <h2>Informe sua Renda Total</h2>
+        <form id="formRenda">
+            <label for="rendaTotal">Renda Total:</label>
+            <input type="number" id="rendaTotal" required>
+            <button type="submit">Salvar Renda</button>
+        </form>
+    </div>
+    <!-- Formulário de Despesas -->
+    <div class="form-container">
+        <h2>Adicionar Despesa</h2>
+        <form id="formDespesa">
+            <label for="nomeDespesa">Nome da Despesa:</label>
+            <input list="despesas" id="nomeDespesa" placeholder="Escolha ou digite o nome">
+            <datalist id="despesas">
+                <option value="Cartão de Crédito">
+                <option value="Lazer">
+                <option value="Supermercado">
+                <option value="Transporte">
+            </datalist> 
+            <label for="valor">Valor da Despesa:</label>
+            <input type="number" id="valor" required>
+
+            <label for="mes">Mês e Ano da Despesa:</label>
+            <input type="month" id="mes" required>            
+
+            <button type="submit">Adicionar Despesa</button>
+        </form>
+    </div>
+    <!-- Lista de Despesas -->
+    <div class="despesas-list">
+        <h2>Despesas Registradas</h2>
+        <ul id="listaDespesas">
+            <!-- Despesas serão listadas aqui -->
+        </ul>
+    </div>
+
+    <h1>Tabela com Gráficos</h1>
+
+    <div class="grafico-barras"> <!--os gráficos-->
+        <div class="colunas">
+            <div class="escala-y">
+            </div>
+
+            <div class="area-grafico"> <!--area do gráfico e as barras-->
+                <div class="area-barra">
+                    <div class="divisao"> <!--colunas-->
+                        <div class= "barra cor"></div> <!--barras-->
+        </div>
+        <div class="escala-x">
+            </div>
+        </div>
+    </div>
+</div>   
+
+</body>
+</html>
