@@ -33,98 +33,85 @@
             <ul class="list-tasks"></ul> <!-- Lista não ordenada onde as tarefas serão exibidas -->
         </div>
 
-    <h1>Formulários de despesas</h1>
-    <!-- Formulário de Renda -->
+    <div class="container">
+        <!-- Formulário de Renda -->
     <div class="form-container">
         <h2>Informe sua Renda Total</h2>
         <form id="formRenda">
             <label for="rendaTotal">Renda Total:</label>
             <input type="number" id="rendaTotal" required>
-            <button type="submit">Salvar Renda</button>
+            <button type="submit">Salvar Renda</button>            
         </form>
+
     </div>
-    <!-- Formulário de Despesas -->
-    <div class="form-container">
-        <h2>Adicionar Despesa</h2>
-        <form id="formDespesa">
-            <label for="nomeDespesa">Nome da Despesa:</label>
-            <input list="despesas" id="nomeDespesa" placeholder="Escolha ou digite o nome">
-            <datalist id="despesas">
-                <option value="Cartão de Crédito">
-                <option value="Lazer">
-                <option value="Supermercado">
-                <option value="Transporte">
-            </datalist> 
-            <label for="valor">Valor da Despesa:</label>
-            <input type="number" id="valor" required>
+        <!-- Formulário de Despesas -->
+        <div class="form-container">
+            <h2>Adicionar Nova Despesa</h2>
+            <form id="formDespesa">
+                <label for="nomeDespesa">Nome da Despesa:</label>
+                <input list="despesas" id="nomeDespesa" placeholder="Escolha ou digite o nome da despesa">
+                <datalist id="despesas"> <!-- opções de entrada-->
+                    <option value="Cartão de Crédito">
+                    <option value="Lazer">
+                    <option value="Supermercado">
+                    <option value="Transporte">
+                </datalist>                
 
-            <label for="mes">Mês e Ano da Despesa:</label>
-            <input type="month" id="mes" required>            
+                <label for="valor">Valor da Despesa:</label>
+                <input type="number" id="valor" placeholder="Digite o valor" required>
+                <label for="mes">Mês e Ano da Despesa:</label>
+                <input type="month" id="mes" required>
 
-            <button type="submit">Adicionar Despesa</button>
-        </form>
-    </div>
-    <!-- Lista de Despesas -->
-    <div class="despesas-list">
-        <h2>Despesas Registradas</h2>
-        <ul id="listaDespesas">
-            <!-- Despesas serão listadas aqui -->
-        </ul>
-    </div>
-
-
-
-    <h1>Tabela com Gráficos</h1>
-    <div class="grafico-barras"> <!--os gráficos-->
-        <div class="colunas">
-            <div class="escala-y"> <!--valores de gastos alcançados-->
-                <div class="divisao">60.000,00</div>
-                <div class="divisao">100,00</div>
-                <div class="divisao">20,00</div>
-                <div class="divisao">5.000,00</div>
-                <div class="divisao">150,00</div>
-                <div class="divisao">10,00</div>
-                <div class="divisao">0.50</div>                 
-            </div>
-            <div class="area-grafico"> <!--area do gráfico e as barras-->
-                <div class="area-barra">                
-                    tabela </div>
-                    <div class="divisao"> <!--colunas-->
-                        <div class= "barra cor"></div> <!--barras--> </div>
-                    <div class="divisao">
-                        <div class= "barra cor"></div> </div>
-                    <div class="divisao">
-                        <div class= "barra cor"></div> </div>
-                    <div class="divisao">
-                        <div class= "barra cor"></div> </div>
-                    <div class="divisao">
-                        <div class= "barra cor"></div> </div>
-                    <div class="divisao">
-                        <div class= "barra cor"></div> </div>
-                    <div class="divisao">
-                        <div class= "barra cor"></div> </div>
-                    <div class="divisao">
-                        <div class= "barra cor"></div> </div>
-                    <div class="divisao">
-                        <div class= "barra cor"></div> </div>
-                    <div class="divisao">
-                        <div class= "barra cor"></div> </div>
-                    <div class="divisao">
-                        <div class= "barra cor"></div> </div>
-                    <div class="divisao">
-                        <div class= "barra cor"></div> </div>
-        <div class="escala-x">
-            <div class="divisao">
-                Abr<br> <!--mês e ano-->
-                2024 </div>
-            <div class="divisao">
-                Abr<br> <!--mês e ano-->
-                2024 </div>
-                <!--todos os meses-->
-            </div>
+                <button type="submit">Adicionar Despesa</button><!-- botão adicionar despesa-->
+            </form>
         </div>
+
+        <!-- Lista de Despesas adicionadas pelo usuário -->
+        <div class="despesas-list">
+            <h2>Carteira</h2>
+            <p id="exibirRenda" class="renda-total">Renda Total: R$ 0,00</p> <!--Exibir valor da renda-->
+            <button type="button" id="editarRenda">Editar Renda</button>
+            <ul id="listaDespesas">                
+                <li>
+                    <span>Nome da Despesa: <input type="text" placeholder="Nome da despesa" value=""></span>
+                    <!--verificar lógica para adicionar valores com vírgula-->
+                    <span>Valor: <input type="number" placeholder="Valor da Despesa" value="" step="any"></span>
+                    <span>Mês e Ano: <input type="month" value=""></span>
+                    <button type="button" id="editarDespesa">Editar</button>
+                </li>                
+            </ul>
+        </div>
+
+       <!-- Gráficos de Despesas -->
+        <div class="graficos-container">
+            <h2>Gráfico de Gastos por Tema</h2>
+            <div id="graficoPizza">
+                <!-- aqui está o gráfico de pizza que mostrará os gastos por temas -->
+                <p>Gráfico de Pizza</p>
+            </div>
+
+            <h2>Gráfico de Gastos</h2>
+            <div id="graficoBarrasMensal">
+                <!-- aqui está o gráfico de barras verticais que mostrará os gastos mensais -->  
+                <p>Gráfico de Barras Mensal</p>
+            </div> 
+
+            <!-- Botão Dropdown para alternar entre gráfico mensal e anual -->
+            <div class="dropdown">
+                <button class="dropdown-btn">Ver Gráfico</button>
+                <div class="dropdown-content">
+                    <a href="#" id="mostrarGraficoMensal">Mensal</a>
+                    <a href="#" id="mostrarGraficoAnual">Anual</a>
+                </div>
+            </div>
+
+            <!-- aqui está o Gráfico de gastos anual -->
+            <div id="graficoBarrasAnuais">
+                <p>Gráfico de Barras Anual</p>
+            </div>
+        </div>   
+
     </div>
-</div>   
 
 </body>
 </html>
