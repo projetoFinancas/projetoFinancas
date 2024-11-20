@@ -7,28 +7,28 @@
 </head>
 <body>
     <div class="container">
-
         <div class="content first-content">
             <div class="first-column">
                 <h2 class="title">Bem-vindo de volta!</h2>
-                <p class="description">Para se manter conectado conosco, faça o login com a sua conta pessoal.</p>
+                <p class="description">Para se manter conectado conosco, faça o login com a sua conta pessoal.</p>
                 <button class="btn">Conecte-se</button>
             </div>
 
-            <div class="content secound-column">
+            <div class="content second-column">
                 <h2 class="title">Crie uma conta</h2>
-                <form class="form">
-                    <input type="text" placeholder="Nome Completo" value="">
-                    <input type="text" placeholder="CPF" value="">
-                    <input type="text" placeholder="Email" value="">
-                    <input type="text" placeholder="Senha" value="">
-                    <input type="date" value="">
-                    <button class="btn">Inscreva-se</button>
+                <form class="form" method="post" action="/database/register/">
+                    {% csrf_token %}
+                    <input type="text" placeholder="Nome Completo" name="fullName">
+                    <input type="text" placeholder="CPF" name="cpf">
+                    <input type="text" placeholder="Email" name="email">
+                    <input type="password" placeholder="Senha" name="password">
+                    <input type="date" name="dateBirth">
+                    <button class="btn" type="submit">Inscreva-se</button>
                 </form>
             </div>
         </div> 
 
-        <div class="content secound-content"> 
+        <div class="content second-content"> 
             <div class="first-column">
                 <h2 class="title">Olá amigo</h2>
                 <p class="description">Entre com seus detalhes pessoais</p>
@@ -36,18 +36,17 @@
                 <button class="btn">Cadastre-se</button>
             </div>
 
-            <div class="content secound-column">
+            <div class="content second-column">
                 <h2 class="title">Faça Login</h2>
                 <p class="description">Ou utilize seu email para se cadastrar</p>
                 <form class="form">
-                    <input type="text" placeholder="Email" value="">
-                    <input type="text" placeholder="Senha" value="">
+                    <input type="text" placeholder="Email" name="email">
+                    <input type="password" placeholder="Senha" name="password">
                     <a href="#">Esqueceu sua senha?</a>
                     <button class="btn">Login</button>
                 </form>
             </div>
         </div>
-
     </div>
 </body>
 </html>
