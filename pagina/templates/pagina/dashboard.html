@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Dashboard</title>    
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    
+<!-- Barra de navegação -->
+    <div class="nav-bar">
+        <div class="logo">
+            <!-- Imagem do logotipo da marca, exibida na barra de navegação -->
+            <svg width="28" height="28" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.75016 16.3334C7.76053 16.2481 6.80037 15.9532 5.9335 15.4682C5.06662 14.9833 4.31288 14.3194 3.72237 13.5207C3.13185 12.722 2.71808 11.8068 2.50854 10.8358C2.29901 9.86485 2.29852 8.86043 2.5071 7.88928C2.71568 6.91812 3.12856 6.00248 3.7183 5.2032C4.30803 4.40391 5.06112 3.73929 5.92752 3.25349C6.79392 2.7677 7.75379 2.47185 8.74334 2.38562C9.73289 2.29939 10.7295 2.42474 11.6668 2.75336L9.3335 5.83336L11.6668 8.16669C11.6668 8.16669 8.16683 9.33336 2.3335 9.33336M19.2502 16.3334C20.2398 16.2481 21.2 15.9532 22.0668 15.4682C22.9337 14.9833 23.6874 14.3194 24.278 13.5207C24.8685 12.722 25.2823 11.8068 25.4918 10.8358C25.7013 9.86485 25.7018 8.86043 25.4932 7.88928C25.2846 6.91812 24.8718 6.00248 24.282 5.2032C23.6923 4.40391 22.9392 3.73929 22.0728 3.25349C21.2064 2.7677 20.2465 2.47185 19.257 2.38562C18.2674 2.29939 17.2709 2.42474 16.3335 2.75336L18.6668 5.83336L16.3335 8.16669C16.3335 8.16669 19.8335 9.33336 25.6668 9.33336M11.6668 15.1667V12.8334M16.3335 15.1667V12.8334" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M14.0002 25.6667C18.5105 25.6667 22.1668 23.3162 22.1668 20.4167C22.1668 17.5172 18.5105 15.1667 14.0002 15.1667C9.48984 15.1667 5.8335 17.5172 5.8335 20.4167C5.8335 23.3162 9.48984 25.6667 14.0002 25.6667Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M2.3335 18.6667C4.66683 18.6667 5.8335 19.8334 5.8335 19.8334M2.3335 25.6667C2.3335 23.6834 3.85016 22.1667 5.8335 22.1667M22.1668 19.8334C22.1668 19.8334 23.3335 18.6667 25.6668 18.6667M22.1668 22.1667C24.1502 22.1667 25.6668 23.6834 25.6668 25.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>   
+    </div>
+
+<!--header-->
+    <header class="top-header">        
+        <div class="boas_vindas">
+            <p>Bem-vindo(a)</p>
+            <h1>Matheus Dias</h1>            
+        </div>        
+        <div class="header-actions">
+            <!-- Campo de pesquisa para o usuário -->
+            <input type="text" placeholder="Pesquisar" class="search-input">        
+            <div class="icon-group">
+                <!-- Ícone de notificação -->
+                <img src="./img/notificacao2.png" alt="Ícone 1" class="action-icon">
+                <!-- Ícone de perfil do usuário -->
+                <img src="./img/do-utilizador.png" alt="Ícone 2" class="action-icon">
+            </div>
+        </div>
+    </header>
+
+<!-- main-->
+    <main class="content-area">        
+        <!-- Seção de detalhes da conta do usuário -->
+        <div class="contents-left">
+            <section class="account-details">
+                <div class="header">
+                    <h2>Detalhes da Conta</h2>
+                    <svg width="18" height="18" viewBox="0 0 18 4" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 2C4 2.53043 3.78929 3.03914 3.41421 3.41421C3.03914 3.78929 2.53043 4 2 4C1.46957 4 0.960859 3.78929 0.585786 3.41421C0.210714 3.03914 0 2.53043 0 2C0 1.46957 0.210714 0.96086 0.585786 0.585787C0.960859 0.210714 1.46957 0 2 0C2.53043 0 3.03914 0.210714 3.41421 0.585787C3.78929 0.96086 4 1.46957 4 2ZM11 2C11 2.53043 10.7893 3.03914 10.4142 3.41421C10.0391 3.78929 9.53043 4 9 4C8.46957 4 7.96086 3.78929 7.58579 3.41421C7.21071 3.03914 7 2.53043 7 2C7 1.46957 7.21071 0.96086 7.58579 0.585787C7.96086 0.210714 8.46957 0 9 0C9.53043 0 10.0391 0.210714 10.4142 0.585787C10.7893 0.96086 11 1.46957 11 2ZM18 2C18 2.53043 17.7893 3.03914 17.4142 3.41421C17.0391 3.78929 16.5304 4 16 4C15.4696 4 14.9609 3.78929 14.5858 3.41421C14.2107 3.03914 14 2.53043 14 2C14 1.46957 14.2107 0.96086 14.5858 0.585787C14.9609 0.210714 15.4696 0 16 0C16.5304 0 17.0391 0.210714 17.4142 0.585787C17.7893 0.96086 18 1.46957 18 2Z" fill="#888888"/>
+                    </svg>
+                </div>
+                <div class="account-summary">
+                    <!-- Item de saldo atual -->
+                    <div class="balance-item">
+                        <!-- icone -->
+                        <img src="./img/Icon.saldo_atual.svg" alt="Ícone Saldo Atual" class="balance-icon">
+                        <div class="balance-text">
+                            <!--descrição de dados-->
+                            <p class="balance-label">Saldo Atual</p>
+                            <p class="balance-amount">R$ 5.000,00</p>
+                        </div>
+                    </div>
+                    <!-- Item de despesas -->
+                    <div class="balance-item">
+                        <img src="./img/Icon.despesas.svg" alt="Ícone Despesas" class="balance-icon">
+                        <div class="balance-text">
+                            <p class="balance-label">Despesas</p>
+                            <p class="balance-amount">R$ 1.500,00</p>
+                        </div>
+                    </div>
+                    <!-- Item de renda -->
+                    <div class="balance-item">
+                        <img src="./img/Icon.renda.svg" alt="Ícone Renda" class="balance-icon">
+                        <div class="balance-text">
+                            <p class="balance-label">Renda</p>
+                            <p class="balance-amount">R$ 6.000,00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Seção de histórico de despesas -->
+            <section class="expense-history">
+                <h2>Histórico de Despesas</h2>
+                <div class="expense-summary">
+                    <!-- Item de despesa com categoria e dado da categoria -->
+                    <div class="expense-item">
+                        <!--icone que antecessede a categoria-->
+                        <img src="./img/ff4500.png" alt="Ícone Despesa" class="expense-icon">
+                        <div class="expense-text">
+                            <p class="expense-label">Categoria</p>
+                            <p class="expense-amount">Alimentação</p>
+                        </div>
+                    </div>
+                    <!-- Data da despesa -->
+                    <div class="expense-item">
+                        <div class="expense-text">
+                            <p class="expense-label">Data</p>
+                            <p class="expense-amount">01/02/2025</p>
+                        </div>
+                    </div>
+                    <!-- Valor da despesa -->
+                    <div class="expense-item">
+                        <div class="expense-text">
+                            <p class="expense-label">Valor</p>
+                            <p class="expense-amount">R$ 6.000,00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="despesas-por-categoria">
+            <div class="header">
+                <h2>Despesas por Categoria</h2>
+                <div class="btn-calendario">
+                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.5 4.50012H5.5C4.39543 4.50012 3.5 5.39555 3.5 6.50012V17.5001C3.5 18.6047 4.39543 19.5001 5.5 19.5001H19.5C20.6046 19.5001 21.5 18.6047 21.5 17.5001V6.50012C21.5 5.39555 20.6046 4.50012 19.5 4.50012Z" stroke="#434343" stroke-width="2"/>
+                        <path d="M3.5 8.50012C3.5 6.61412 3.5 5.67212 4.086 5.08612C4.672 4.50012 5.614 4.50012 7.5 4.50012H17.5C19.386 4.50012 20.328 4.50012 20.914 5.08612C21.5 5.67212 21.5 6.61412 21.5 8.50012H3.5Z" fill="#434343"/>
+                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.63556 11.2072C1.82309 11.3946 2.0774 11.5 2.34256 11.5C2.60772 11.5 2.86203 11.3946 3.04956 11.2072L7.99956 6.25717L12.9496 11.2072C13.1382 11.3893 13.3908 11.4901 13.653 11.4878C13.9152 11.4856 14.166 11.3804 14.3514 11.195C14.5368 11.0096 14.642 10.7588 14.6442 10.4966C14.6465 10.2344 14.5457 9.98177 14.3636 9.79317L8.70656 4.13617C8.51903 3.9487 8.26472 3.84338 7.99956 3.84338C7.7344 3.84338 7.48009 3.9487 7.29256 4.13617L1.63556 9.79317C1.44809 9.9807 1.34277 10.235 1.34277 10.5002C1.34277 10.7653 1.44809 11.0196 1.63556 11.2072Z" fill="black"/>
+                    </svg>
+                </div>
+            </div>
+
+            <div>
+                <div class="card-infos">
+                    <div class="expense-card">
+                        <div class="expense-item">
+                            <span class="expense-cor"></span>
+                            <p>Lojas Online</p>
+                        </div>
+                        <p>R$130,00</p>
+                    </div>
+                </div>
+                <button>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 12.4999H12M12 12.4999H20M12 12.4999V4.49988M12 12.4999V20.4999" stroke="#4C4C4C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <p>Adicionar Categoria</p>
+                </button>
+            </div>
+
+        </section>
+
+        <div class="contents-right">
+            <section class="checklist">
+                <div class="header">
+                    <h2>CheckList</h2>
+                    <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 12.4999H12M12 12.4999H20M12 12.4999V4.49988M12 12.4999V20.4999" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="lista">
+                    <div class="item">
+                        <input type="checkbox" name="" id="">
+                        <input type="text" name="" id="" value="Fazer alguma coisa">
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" name="" id="">
+                        <input type="text" name="" id=""  value="Fazer alguma coisa">
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" name="" id="">
+                        <input type="text" name="" id=""  value="Fazer alguma coisa">
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" name="" id="">
+                        <input type="text" name="" id="" value="Fazer alguma coisa">
+                    </div>
+                    <div class="item">
+                        <input type="checkbox" name="" id="">
+                        <input type="text" name="" id="" value="Fazer alguma coisa">
+                    </div>
+
+                </div>
+            </section>
+            <section class="anuncio">
+                <div class="conteudo">
+                    <p>Tire dúvidas sobre finanças com o</p>
+                    <h2>Bitzinho</h2>
+                </div>
+                <button>
+                    Link
+                    <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.2021 15.2252C15.1034 15.2254 15.0056 15.2061 14.9144 15.1684C14.8232 15.1307 14.7403 15.0754 14.6705 15.0056C14.6007 14.9358 14.5453 14.8529 14.5076 14.7616C14.47 14.6704 14.4506 14.5726 14.4508 14.4739L14.4508 9.92282L7.95426 16.4194C7.81361 16.56 7.62284 16.639 7.42393 16.639C7.22502 16.639 7.03425 16.56 6.8936 16.4194C6.75295 16.2787 6.67393 16.0879 6.67393 15.889C6.67393 15.6901 6.75295 15.4994 6.8936 15.3587L13.3901 8.86216L8.83814 8.86128C8.63889 8.86128 8.44779 8.78212 8.3069 8.64122C8.166 8.50033 8.08684 8.30923 8.08684 8.10998C8.08684 7.91072 8.166 7.71962 8.3069 7.57873C8.44779 7.43783 8.63889 7.35867 8.83815 7.35867L15.2021 7.35867C15.3008 7.3585 15.3986 7.37782 15.4898 7.41551C15.581 7.45321 15.6639 7.50854 15.7337 7.57834C15.8035 7.64814 15.8589 7.73103 15.8966 7.82226C15.9343 7.91349 15.9536 8.01126 15.9534 8.10998L15.9534 14.4739C15.9536 14.5726 15.9343 14.6704 15.8966 14.7616C15.8589 14.8529 15.8035 14.9358 15.7337 15.0056C15.6639 15.0754 15.581 15.1307 15.4898 15.1684C15.3986 15.2061 15.3008 15.2254 15.2021 15.2252Z" fill="#434343"/>
+                    </svg>
+                </button>
+            </section>
+        </div>
+
+    </main>
+</body>
+</html>
