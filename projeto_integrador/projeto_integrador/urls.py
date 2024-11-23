@@ -9,4 +9,5 @@ urlpatterns = [
     path('dashboard/', views.dashboard, name='dashboard'),
     path('cadastro/', views.cadastro, name='cadastro'),
     path('database/', include('database.urls')), 
+    path('chat-response/', views.chat_response, name='chat_response'), 
 ]
