@@ -1,53 +1,80 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Tela de Cadastro</title>
+    <script src="https://kit.fontawesome.com/c601d460a7.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
-
-        <div class="content first-content">
-            <div class="first-column">
-                <h2 class="title">Bem-vindo de volta!</h2>
-                <p class="description">Para se manter conectado conosco, faça o login com a sua conta pessoal.</p>
-                <button class="btn">Conecte-se</button>
+        <div class="signin-signup">
+            <form action="" class="sign-in-form" method="post">
+                <h2 class="title">Conecte-se </h2>
+                <div class="input-field">
+                    <!-- <i data-lucide="mail"></i> -->
+                    <i class="fa-regular fa-envelope icon-modify"></i>
+                    <input type="email" name="email" id="email" placeholder="Ex: teste@gmail.com" required>
+                </div>
+                <div class="input-field">
+                    <!-- <i data-lucide="lock"></i> -->
+                    <i class="fa-solid fa-lock icon-modify"></i>
+                    <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                </div>
+                <input type="submit" value="Login" class="btn">
+                <p class="account-text">Não tem uma conta?<a href="#" id="sign-up-btn2">Cadastre-se</a></p>
+            </form>
+            <form action="" class="sign-up-form" method="post">
+                <h2 class="title">Cadastre-se</h2>
+                <div class="input-field">
+                    <!-- <i data-lucide="user"></i> -->
+                    <i class="fa-solid fa-user icon-modify"></i>
+                    <input type="text" name="nome" id="nome" placeholder="Ex: João Silva" required>
+                </div>
+                <div class="input-field">
+                    <!-- <i data-lucide="paperclip"></i> -->
+                    <i class="fa-solid fa-paperclip icon-modify"></i>
+                    <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" required>
+                </div>
+                <div class="input-field">
+                    <!-- <i data-lucide="mail"></i> -->
+                    <i class="fa-regular fa-envelope icon-modify"></i>
+                    <input type="email" name="email" id="email" placeholder="Ex: teste@gmail.com" required>
+                </div>
+                <div class="input-field">
+                    <!-- <i data-lucide="lock"></i> -->
+                    <i class="fa-solid fa-lock icon-modify"></i>
+                    <input type="password" name="senha" id="senha" placeholder="Senha" required>
+                </div>
+                <div class="input-field">
+                    <!-- <i data-lucide="calendar"></i> -->
+                    <i class="fa-solid fa-calendar-days icon-modify"></i>
+                    <input type="date" name="data_nascimento" id="data_nascimento" required>
+                </div>
+                <input type="submit" value="Cadastre-se" class="btn">
+                <p class="account-text">Já tem uma conta?<a href="#" id="sign-in-btn2">Conecte-se</a></p>
+            </form>
+        </div>
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3 class="tittle2">Bem-vindo de volta!</h3>
+                    <p>Aqui, você é o protagonista  <br>de sua jornada financeira.</p>
+                    <button class="btn" id="sign-in-btn">Login</button>
+                </div>
             </div>
-
-            <div class="content secound-column">
-                <h2 class="title">Crie uma conta</h2>
-                <form class="form">
-                    <input type="text" placeholder="Nome Completo" value="">
-                    <input type="text" placeholder="CPF" value="">
-                    <input type="text" placeholder="Email" value="">
-                    <input type="text" placeholder="Senha" value="">
-                    <input type="date" value="">
-                    <button class="btn">Inscreva-se</button>
-                </form>
-            </div>
-        </div> 
-
-        <div class="content secound-content"> 
-            <div class="first-column">
-                <h2 class="title">Olá amigo</h2>
-                <p class="description">Entre com seus detalhes pessoais</p>
-                <p class="description">e comece uma jornada com a gente</p>
-                <button class="btn">Cadastre-se</button>
-            </div>
-
-            <div class="content secound-column">
-                <h2 class="title">Faça Login</h2>
-                <p class="description">Ou utilize seu email para se cadastrar</p>
-                <form class="form">
-                    <input type="text" placeholder="Email" value="">
-                    <input type="text" placeholder="Senha" value="">
-                    <a href="#">Esqueceu sua senha?</a>
-                    <button class="btn">Login</button>
-                </form>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3 class="tittle2">Bem-vindo de volta<h3>
+                    <p>Você é o autor do seu futuro financeiro. Dê o primeiro passo para escrever uma história de sucesso.</p>
+                    <button class="btn" id="sign-up-btn">Cadastre-se</button>
+                </div>
             </div>
         </div>
-
     </div>
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="./js/script.js" defer></script>
 </body>
 </html>
