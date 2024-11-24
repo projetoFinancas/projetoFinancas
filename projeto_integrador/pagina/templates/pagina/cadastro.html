@@ -10,7 +10,9 @@
 <body>
     <div class="container">
         <div class="signin-signup">
-            <form action="" class="sign-in-form" method="post">
+            
+            <form action="{% url 'login' %}" class="sign-in-form" method="post" >
+                {% csrf_token %}
                 <h2 class="title">Conecte-se </h2>
                 <div class="input-field">
                     <!-- <i data-lucide="mail"></i> -->
@@ -25,7 +27,8 @@
                 <input type="submit" value="Login" class="btn">
                 <p class="account-text">Não tem uma conta?<a href="#" id="sign-up-btn2">Cadastre-se</a></p>
             </form>
-            <form action="" class="sign-up-form" method="post">
+            <form action="{% url 'user_create' %}" class="sign-up-form" method="post">
+                {% csrf_token %}
                 <h2 class="title">Cadastre-se</h2>
                 <div class="input-field">
                     <!-- <i data-lucide="user"></i> -->
@@ -55,7 +58,18 @@
                 <input type="submit" value="Cadastre-se" class="btn">
                 <p class="account-text">Já tem uma conta?<a href="#" id="sign-in-btn2">Conecte-se</a></p>
             </form>
-        </div>
+            <!-- Mensagem de sucesso --> 
+             {% if message %} 
+             <div class="success-message" id="successMessage"> {{ message }} </div>
+             <script>
+                setTimeout(function(){
+                    var successMessage = document.getElementById('successMessage');
+                    if (successMessage){
+                        successMessage.style.display = 'none';
+                    }
+                },3000);
+             </script>
+             {% endif %}
         <div class="panels-container">
             <div class="panel left-panel">
                 <div class="content">
